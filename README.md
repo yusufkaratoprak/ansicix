@@ -1,6 +1,7 @@
 # ansicix
 A Simple Devops Tool for Kubernetes pods  HealthCheck created by golang Cobra 
 
+````C
 project-root-directory/
 │
 ├── ansible/
@@ -8,7 +9,7 @@ project-root-directory/
 │   │   ├── hosts.ini
 │   │
 │   ├── playbooks/
-│   │   ├── main.yml (veya kubernetes_health_check.yml ya da benzeri bir isim)
+│   │   ├── main.yml (or kubernetes_health_check.yml)
 │   │
 │   └── ansible.cfg
 │
@@ -23,3 +24,4 @@ project-root-directory/
 │   └── app-deployment.yml
 │
 └── README.md (veya başka bir adla belgelendirme/markdown dosyası)
+````
