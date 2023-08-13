@@ -18,10 +18,10 @@ project-root-directory/
 │
 ├── go/
 │   ├── ansicix.go
-│   └── go.mod (ve diğer Go projeleri için gereken dosyalar)
+│   └── go.mod
 │
 ├── kubernetes/
 │   └── app-deployment.yml
 │
-└── README.md (veya başka bir adla belgelendirme/markdown dosyası)
+└── README.md
 ````
