@@ -1,0 +1,14 @@
+---
+- name: Kubernetes health check with Ansible
+  hosts: localhost
+  tasks:
+  - name: Check health of a specific pod
+    community.kubernetes.k8s_info:
+      api_version: v1
+      kind: Pod
+      namespace: default
+      name: "{{ POD_NAME }}"
+    register: pod_info
+
+  - name: Send pod status to Elasticsearch using Python script
+    command: "python3 send_to_elasticsearch.py {{ pod_info.resources[0].status.phase }}"
