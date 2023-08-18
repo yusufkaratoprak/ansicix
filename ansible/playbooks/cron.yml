@@ -1,1 +1,12 @@
+---
+- name: Kubernetes health check with Ansible
+  hosts: localhost
+  vars:
+    playbook_path: "main.yml"
 
+  tasks:
+  - name: Schedule the playbook to run at specified intervals
+    cron:
+      name: "Run k8s health check"
+      minute: "{{ minute }}"
+      job: "ansible-playbook -i inventory {{ playbook_path }}"
