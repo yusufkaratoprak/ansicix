@@ -9,4 +9,4 @@
     cron:
       name: "Run k8s health check"
       minute: "{{ minute }}"
-      job: "ansible-playbook -i inventory {{ playbook_path }} -e "POD_NAME={{ POD_NAME }}""
+      job: "ansible-playbook -i inventory {{ playbook_path }} -e 'POD_NAME={{ POD_NAME }}'"
