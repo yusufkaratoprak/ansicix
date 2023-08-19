@@ -48,8 +48,8 @@ project-root-directory/
 │   │   ├── hosts.ini
 │   │
 │   ├── playbooks/
-│   │   ├── main.yml (or kubernetes_health_check.yml)
-│   │
+│   │   ├── cron.yml
+│   │   └── main.yml (or kubernetes_health_check.yml)
 │   └── ansible.cfg
 │
 ├── python/
