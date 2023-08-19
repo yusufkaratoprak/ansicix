@@ -29,7 +29,7 @@ $ ansicix setup -p /path/to/your/directory
 If you're targeting Kubernetes and need to specify a pod name, you can easily do so using the `--pod` flag:
 
 ```bash
-$ ansicix setup -p /path/to/your/directory --pod your_pod_name
+$ ansicix setup -p podname -m 5
 ```
 
 ### Wrapping Up
