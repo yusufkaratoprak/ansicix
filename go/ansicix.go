@@ -11,7 +11,7 @@ import (
 func main() {
 	var podName string
 	var minute string
-	const path = "/path/to/your/ansible/playbooks"  // Sabit path değeri
+	const path = "../ansible/playbooks"  // Sabit path değeri
 
 	var rootCmd = &cobra.Command{
 		Use:   "ansicix",
@@ -43,7 +43,7 @@ func main() {
 }
 
 func runAnsiblePlaybooks(path, podName, minute string) {
-	cmd := exec.Command("ansible-playbook", "-i", "inventory", fmt.Sprintf("%s/main.yml", path), "-e", fmt.Sprintf("POD_NAME=%s minute=%s", podName, minute))
+	cmd := exec.Command("ansible-playbook", "-i", "inventory", fmt.Sprintf("%s/cron.yml", path), "-e", fmt.Sprintf("POD_NAME=%s minute=%s", podName, minute))
 	cmd.Stdout = os.Stdout
 	cmd.Stderr = os.Stderr
 	err := cmd.Run()
